@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="Rstyles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+  $("#btsubmit").click(function(){
+var msg = "";
+var a=0;
+var b=0;
+var c=0;
+var d=0;
+var e=0;
+var f=0;
+var name = $("#txtname").val();
+var dob = $("#dtdob").val();
+var add = $("#txtadd").val();
+var pin = $("#nmpin").val();
+var mob = $("#nmmobile").val();
+if ($("#rdmale").prop("checked")) {
+   a=1;
+}
+if ($("#rdfemale").prop("checked")) {
+   b=1;
+}
+if ($("#rdother").prop("checked")) {
+   c=1;
+}
+if ($("#cbC").prop("checked") ) {
+    d=1;
+}
+if ($("#cbC++").prop("checked") ) {
+    e=1;
+}
+if ($("#cbHTML").prop("checked") ) {
+    f=1;
+}
+if (name == "") {
+    msg = msg + "Please Enter Your Name \n";
+}
+if (dob == "") {
+    msg = msg + "Please Enter Your date of birth \n";
+}
+if (add == "") {
+    msg = msg + "Please Enter Your Address \n";
+}
+if (pin == "") {
+    msg = msg + "Please Enter Your Pincode \n";
+}
+if (mob == "") {
+    msg = msg + "Please Enter Your Mobile Number \n";
+}
+if (a==0) {
+	if(b==0){
+		if(c==0){
+    msg = msg + "Please Select Your Gender \n";
+}}}
+if (d==0) {
+	if(e==0){
+		if(f==0){
+    msg = msg + "Please Select atleast one Skill \n";
+}}}
+if (msg == "") {
+    alert("SUBMITTED")
+} else {
+    alert(msg)
+}
+  
+});
+});
+</script>
+</head>
+<body>
+<header>
+    <div class="main">
+      <div class="logo">
+	<img src="logo.png">
+      </div>  
+       <ul>
+	<li><a href="home.html">Home</a></li>
+	<li><a href="gallery.html">Gallery</a></li>
+	<li><a class="active" href="registration.html">Registration</a></li>
+	<li><a href="setting.html">Setting</a></li>
+	<li><a href="#">Help</a></li>			
+       </ul>	
+    </div>
+</div>
+<div class="title">
+    <h1> Registration Form</h1><br><br>
+    <form>
+	Full Name:
+	<input type="text" id="txtName"  name="name"><br>
+    	Gender:
+	<input type="radio" id="rdmale" name="gender" value="male">male
+	<input type="radio" id="rdfemale" name="gender" value="female">female
+	<input type="radio" id="rdother" name="gender" value="other">other<br>
+	D.O.B:
+	<input type="date" id="dtdob" name="D.O.B"><br>
+	Permanent Address:
+	<input type="text" id="txtadd" name="address"><br>
+	Mobile no.:
+	<input type="number" id="nmmobile" name="mobile"><br>
+	Pincode:
+	<input type="number" id="nmpin" name="pincode"><br>
+	Basic skills:
+	<input type="checkbox" id="cbC" name="C" value="C">C
+	<input type="checkbox" id="cbC++" name="C++" value="C++">C++
+	<input type="checkbox" id="cbHTML" name="HTML" value="HTML">HTML<br><br>
+	<input type="button" id="btsubmit" value="SUBMIT">
+    </form>
+</div>
+</body>
+</html>

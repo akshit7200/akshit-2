@@ -1,0 +1,48 @@
+*{
+margin: 0;
+padding: 0;
+font-style: Italic;
+}
+header{
+  background-image:url(001.jpg);
+  height: 150vh;
+  background-size: cover;
+  background-position: center;
+}
+ul{
+float: right;
+margin-top: 35px; 
+margin-right: 25px;
+}
+ul li{
+display: inline-block;
+}
+ul li a{
+text-decoration: none;
+color: white;
+padding: 7px 17px;
+transition: 0.8s ease;
+}
+li a:hover{
+background-color: white;
+color: black;
+}
+li a.active{
+background-color: white;
+color: black;
+}
+.logo img{
+float: left;
+width: 150px;
+opacity: 0.5;
+}
+.title{
+color: white;
+position: absolute;
+left: 50%;
+bottom: 15%;
+}
+.title h1{
+font-size: 70px;
+text-shadow: 3px 3px black;
+}
